@@ -3,10 +3,12 @@ import { Card, Button, Form, Input, Row, Col } from 'antd';
 
 const Connection = ({ connect, disconnect, connectBtn }) => {
   const [form] = Form.useForm();
+
+  // Acceso al servidor
   const record = {
     host: 'broker.emqx.io',
-    clientId: `mqttjs_ + ${Math.random().toString(16).substr(2, 8)}`,
     port: 8083,
+    clientId: `mqttjs_ + ${Math.random().toString(16).substr(2, 8)}`,
   };
   const onFinish = (values) => {
     const { host, clientId, port, username, password } = values;
