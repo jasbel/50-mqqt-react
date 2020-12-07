@@ -6,8 +6,8 @@ const Connection = ({ connect, disconnect, connectBtn }) => {
 
   // Acceso al servidor
   const record = {
-    // host: 'broker.emqx.io', http://servidoriot.ml/, 52.67.166.235
-    host: 'servidoriot.ml',
+    host: 'broker.emqx.io', // http://servidoriot.ml/, 52.67.166.235
+    // host: 'servidoriot.ml',
     port: 8083, //
     clientId: `mqttjs_ + ${Math.random().toString(16).substr(2, 8)}`,
   };
